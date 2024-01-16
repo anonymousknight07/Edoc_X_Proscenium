@@ -1,5 +1,6 @@
 import { authOptions } from "@/auth";
 import ChatInput from "@/components/ChatInput";
+import ChatMessages from "@/components/ChatMessages";
 import { sortedMessagesRef } from "@/lib/converters/Message";
 import { getDocs } from "firebase/firestore";
 import { getServerSession } from "next-auth";
