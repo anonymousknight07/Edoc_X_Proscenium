@@ -1,4 +1,5 @@
 import { authOptions } from "@/auth";
+import AdminContols from "@/components/AdminContols";
 import ChatInput from "@/components/ChatInput";
 import ChatMembersBadges from "@/components/ChatMembersBadges";
 import ChatMessages from "@/components/ChatMessages";
@@ -19,6 +20,7 @@ async function ChatPage({params:{chatId}}:Props) {
   );
   return (
     <>
+    <AdminContols chatId={chatId} />
   
     <ChatMembersBadges chatId ={chatId} />
 
