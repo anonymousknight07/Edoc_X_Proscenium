@@ -81,7 +81,7 @@ function ChatMessages({
       })}
 
 
-
+     <div ref={messagesEndRef}></div>
     </div>
   );
   
