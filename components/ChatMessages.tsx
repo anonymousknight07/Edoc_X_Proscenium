@@ -45,7 +45,7 @@ function ChatMessages({
           </h2>
           <p>Edoc will auto-detect and tranlate it all for you</p>
           </div>
-      )} 
+      )}
     </div>
   );
   
