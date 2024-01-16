@@ -34,16 +34,16 @@ function ChatMessages({
   <div className="p-5">
      
       {!loading && messages?.length ===0 && (
-        <div className="flex flex-col justify-center  text-center items-center p-20 rounded-xl space-y-2 bg-yellow-500 text-black font-extralight">
+        <div className="flex flex-col justify-center  text-center items-center p-20 rounded-xl space-y-2 bg-blue-600 text-black ">
           <MessageCircleIcon className="h-10 w-10"/>
           <h2> 
-            <span className="font-bold">Invite a friend</span>&{" "}
+            <span className="font-bold">Invite a friend </span>&{" "}
             <span className="font-bold">
               Send your first message in ANY language
             </span>{" "}
             below to get started!
           </h2>
-          <p>Edoc will auto-detect and tranlate it all for you</p>
+          <p className="font-bold">Edoc will auto-detect and tranlate it all for you</p>
           </div>
       )}
     </div>
