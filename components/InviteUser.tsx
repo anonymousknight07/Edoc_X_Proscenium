@@ -34,6 +34,7 @@ import { useSubscriptionStore } from "@/store/store";
 import { Toast } from "./ui/toast";
 import { useRouter } from "next/navigation";  
 import { useState } from "react";
+import { ToastAction } from "@radix-ui/react-toast";
 
 const formSchema = z.object({
   email: z.string().email("Please enter a valid email address"),
@@ -71,10 +72,57 @@ function InviteUser({chatId}:{chatId:string}) {
     if(!isPro && noOfUsersInChat >=2) {
       toast({
         title: " Free plan limit exceeded",
-        description: " "
-      })
+        description:"Oopsie-daisy! Looks like you've hit the chat party limit on the Free plan. Time to upgrade to PRO for an exclusive VIP pass to unlimited chat shenanigans!",
+        variant: "destructive",
+        action:(
+         <ToastAction 
+          altText="Upgrade"
+          onClick={()=> router.push("/register")} 
+          > 
+          Upgrade to PRO
+          </ToastAction>
+      ),
+    
+    });
+  return;
     }
-  }
+
+    const querySnapshot = await getDocs( getUserbyEmailRef(values.email));
+
+    if(querySnapshot.empty){
+      toast({
+        title:" User not found",
+        description :
+          " Please enter an email address of a registered user OR resend the invitation once they have signed up!",
+        
+        variant:"destructive",
+      });
+      return;
+    }else{
+      const user = querySnapshot.docs[0].data();
+
+      await setDoc(addChatRef(chatId, user.id),{
+        userId: user.id!,
+        email: user.email!,
+        timestamp:serverTimestamp(),
+        chatId: chatId,
+        isAdmin:false,
+        image:user.image ||" ",
+      }).then(()=>{
+        setOpen(false);
+        toast({
+          title:"Added to chat",
+          description:"User added successfully?",
+          className:"bg-green-600 text-white",
+          duration:3000,
+        });
+        setOpenInviteLink(true);
+      })
+
+      
+    }
+    form.reset()
+}
 
   return(
 
