@@ -54,7 +54,7 @@ function ChatInput({chatId}:{chatId: string}) {
 
          const isPro= subscription?.role ==='pro' && subscription.status ==='active';
 
-         if(!isPro && messages >=20){
+         if(!isPro && messages >=150){
             toast({
             title:"Free plan limit exceeded",
             description:"Free plan limit exhausted, Upgrade to PRO for unlimited chat messages!",

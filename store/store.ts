@@ -24,14 +24,15 @@ export type LanguagesSupported =
      |"te";
 
 export const LanguagesSupportedMap: Record<LanguagesSupported, string>={
-    ar: "Arabic",
+    en: "English",
     hi: "Hindi",
-    as: "Assamese",
+    sa: "Sanskrit",
     bn: "Bengali",
+    te: "Telugu",
     bho: "Bhojpuri",
     zh: "Chinese",
     cs: "Czech",
-    en: "English",
+    ar: "Arabic",
     fr: "French",
     de: "German",
     gu: "Gujarati",
@@ -40,13 +41,13 @@ export const LanguagesSupportedMap: Record<LanguagesSupported, string>={
     mr: "Marathi",
     ne: "Nepali",
     pt: "Portuguese",
-    sa: "Sanskrit",
+    as: "Assamese",
     es: "Spanish",
     ta: "Tamil",
-    te: "Telugu",
+    
     
 };
- const Lang_free=2;
+ const Lang_free=5;
 
 interface LanguageState{
     language: LanguagesSupported;
