@@ -35,6 +35,7 @@ import { Toast } from "./ui/toast";
 import { useRouter } from "next/navigation";  
 import { useState } from "react";
 import { ToastAction } from "@radix-ui/react-toast";
+import ShareLink from "./ShareLink";
 
 const formSchema = z.object({
   email: z.string().email("Please enter a valid email address"),
@@ -169,9 +170,13 @@ function InviteUser({chatId}:{chatId:string}) {
 
                   </DialogContent>
                   </Dialog>
+
+                  <ShareLink isOpen={openInviteLink}
+                  setIsOpen={setOpenInviteLink}
+                  chatId={chatId} />
                   </>
     )
-  )
+  );
   
 }
 
