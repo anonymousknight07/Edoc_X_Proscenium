@@ -16,7 +16,7 @@ async function Header() {
         <nav className="flex flex-col items-center sm:flex-row sm:items-center bg-white mt-8 mr-6 ml-6 mb-6 dark:bg-gray-900 max-w-7xl">
             <Logo/>
 
-            <div className="flex-1 flex items-center justify-end ">  
+            <div className="flex-1 flex items-center justify-end gap-3">  
             <LanguageSelect />
 
               {session ? (

@@ -1,6 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
-import Demo2 from "../images/landingPage/Demo2.gif"
+import Demo2 from "../images/landingPage/chatting-illustration.svg"
 // @import url('https://fonts.googleapis.com/css2?family=Young+Serif&display=swap');
 import logo from "../images/landingPage/logo.png"
 
@@ -43,13 +43,13 @@ export default function Home() {
 
           
           <div className="mt-16 flow-root sm:mt-24">
-            <div className="-m-2 rounded-xl bg-gray-900/5 p-2 ring-1 ring-inset ring-gray-900/10 lg:-m-4 lg:rounded-2xl lg:p-4">
+            <div className="-m-2 flex justify-center rounded-xl bg-gray-900/5 p-2 ring-1 ring-inset ring-gray-900/10 lg:-m-4 lg:rounded-2xl lg:p-4">
               <Image 
                unoptimized
                src={Demo2}
                alt="gif"
-               width={2432}
-               height={1442}
+               width={600}
+               height={200}
                className="rounded-md shadow-2xl ring-1 ring-gray-900/10"/>
             </div>
           </div>
