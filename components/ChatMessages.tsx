@@ -45,7 +45,7 @@ function ChatMessages({
             </span>{" "}
             below to get started!
           </h2>
-          <p className="font-bold">Edoc will auto-detect and tranlate it all for you</p>
+          <p className="font-bold">Proscenium will auto-detect and tranlate it all for you</p>
           </div>
       )}
 

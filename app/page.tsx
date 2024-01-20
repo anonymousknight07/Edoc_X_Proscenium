@@ -1,6 +1,8 @@
 import Image from "next/image";
 import Link from "next/link";
-import Demo2 from "/images/landingPage/Demo2.gif"
+import Demo2 from "../images/landingPage/Demo2.gif"
+// @import url('https://fonts.googleapis.com/css2?family=Young+Serif&display=swap');
+import logo from "../images/landingPage/logo.png"
 
 export default function Home() {
   return (
@@ -18,11 +20,12 @@ export default function Home() {
         </div>
         <div className="py-12 sm:py-20 lg:pb-40">
           <div className="mx-auto max-w-7xl px-6 lg:px-8">
-            <div className="mx-auto max-w-2xl text-center">
+            <div className="mx-auto max-w-2xl text-center flex flex-col justify-center items-center">
 
             <h1 className="text-4xl font-bold tracking-tight sm:text-6xl">Proscenium</h1>
+            {/* <Image src={logo} alt="logo illustration" height={400} width={400} className="flex justify-center"/> */}
             <p className="mt-6 text-lg leading-8 text-gray-600 dark:text-gray-300">Your Passport to Seamless Multilingual Chats.{" "}
-            <span className="text-yellow-600 dark:text-yellow-600">Let Edoc handle the translation.</span>
+            <span className="text-yellow-600 dark:text-yellow-600">Let Proscenium handle the translation.</span>
             </p>
             <div className="mt-10 flex items-center justify-center gap-x-6">
               <Link 

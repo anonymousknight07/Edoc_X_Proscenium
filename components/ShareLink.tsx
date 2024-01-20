@@ -73,7 +73,7 @@ import {
           <DialogHeader>
             <DialogDescription>
               Any user who has been {" "}
-              <span className="text-blue-600 font-bold">graned access</span>{" "}
+              <span className="text-blue-600 font-bold">granted access</span>{" "}
               can use this link
             </DialogDescription>
           </DialogHeader>
