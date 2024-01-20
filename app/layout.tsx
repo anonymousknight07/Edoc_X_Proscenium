@@ -23,27 +23,30 @@ export default function RootLayout({
   return (
     <ClientProviders>
 
-    <html lang="en">
-      <body className="flex flex-col min-h-screen">
-        <FirebaseAuthProvider>
-          <SubscriptionProvider>
+      <html lang="en">
+        <head>
+          <link rel='icon' href='/favicon.ico' />
+        </head>
+        <body className="flex flex-col min-h-screen">
+          <FirebaseAuthProvider>
+            <SubscriptionProvider>
 
 
-        <ThemeProvider
-         attribute="class"
-         defaultTheme="system"
-         enableSystem
-         disableTransitionOnChange 
-         >
+              <ThemeProvider
+                attribute="class"
+                defaultTheme="system"
+                enableSystem
+                disableTransitionOnChange
+              >
 
-        <Header />
-        {children}
-        <Toaster/>
-        </ThemeProvider>
-        </SubscriptionProvider>
-        </FirebaseAuthProvider>
+                <Header />
+                {children}
+                <Toaster />
+              </ThemeProvider>
+            </SubscriptionProvider>
+          </FirebaseAuthProvider>
         </body>
-    </html>
+      </html>
     </ClientProviders>
   );
 }
