@@ -20,7 +20,7 @@ export default function Home() {
           <div className="mx-auto max-w-7xl px-6 lg:px-8">
             <div className="mx-auto max-w-2xl text-center">
 
-            <h1 className="text-4xl font-bold tracking-tight sm:text-6xl">Edoc X: Proscenium</h1>
+            <h1 className="text-4xl font-bold tracking-tight sm:text-6xl">Proscenium</h1>
             <p className="mt-6 text-lg leading-8 text-gray-600 dark:text-gray-300">Your Passport to Seamless Multilingual Chats.{" "}
             <span className="text-yellow-600 dark:text-yellow-600">Let Edoc handle the translation.</span>
             </p>

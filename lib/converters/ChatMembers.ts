@@ -70,6 +70,6 @@ export const addChatRef =(chatId: string, userId: string) =>
 
 export const chatMembersCollectionGroupRef=(userId:string)=>
  query(
-    collection(db,"members"),
+    collectionGroup(db,"members"),
     where("userId","==",userId)
  ).withConverter(chatMembersConverter);
