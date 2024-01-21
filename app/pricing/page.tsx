@@ -13,7 +13,7 @@ function page() {
             </div>
             <div className="relative mt-6">
                 <p className="mx-auto max-w-2xl text-lg leading-8 text-white/60">
-                We've crafted plans to perfectly align with your needs.
+                We have crafted plans to perfectly align with your needs.
                 </p>
                 <svg
                 viewBox="0 0 1208 1024"
